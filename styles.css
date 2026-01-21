@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: #ffe4e1;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Pantalla inicial */
+#inicio {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(#ffb6c1, #ffe4e1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.8s;
+}
+
+#inicio h1 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+#inicio p {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    animation: pulse 2s infinite;
+}
+
+/* Globos */
+.globos span {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flotar 10s infinite linear;
+    opacity: 0.85;
+}
+
+.globos span:nth-child(1) { left: 10%; background: #ff69b4; animation-duration: 9s; }
+.globos span:nth-child(2) { left: 28%; background: #87cefa; animation-duration: 12s; animation-delay: 2s; }
+.globos span:nth-child(3) { left: 45%; background: #98fb98; animation-duration: 11s; animation-delay: 4s; }
+.globos span:nth-child(4) { left: 68%; background: #ffd700; animation-duration: 10s; animation-delay: 1s; }
+.globos span:nth-child(5) { left: 85%; background: #dda0dd; animation-duration: 13s; animation-delay: 3.5s; }
+
+@keyframes flotar {
+    0%   { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-120vh) rotate(360deg); }
+}
+
+/* Pantalla principal */
+#cumple {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 1.5rem;
+}
+
+h1, h2 {
+    font-size: clamp(2rem, 5.5vw, 3.2rem);
+    color: #ff1493;
+}
+
+p {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    color: #ff69b4;
+    max-width: 90%;
+}
+
+.gino {
+    width: 180px;
+    max-width: 35vw;
+    animation: saltar 1.4s infinite ease-in-out;
+}
+
+button {
+    font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+    padding: 16px 40px;
+    border: none;
+    border-radius: 30px;
+    background: #ff69b4;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255,105,180,0.4);
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #ff1493;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255,20,147,0.5);
+}
+
+/* === VIDEO === */
+#videoDrive {
+    width: 85vw;
+    max-width: 900px;
+    height: 85vh;
+    border: none;
+}
+
+
+#video {
+    width: 85vw;                 /* más grande en desktop */
+    max-width: 900px;            /* límite para pantallas grandes, no se haga gigante */
+    height: auto;
+    max-height: 85vh;            /* no sobrepase mucho la altura en PC */
+    object-fit: contain;         /* mantiene proporción sin cortar */
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* Animaciones */
+@keyframes saltar {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-18px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.08); }
+}
+
+/* Responsive */
+/* Responsive para celular */
+/* En celular: más grande, casi full screen */
+@media (max-width: 768px) {
+    #videoDrive {
+        width: 98vw;
+        height: 92vh;
+    }
+}
+

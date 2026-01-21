@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumple Hanna 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Pantalla inicial -->
+    <div id="inicio">
+        <h1>💖 Hola Hanna 💖</h1>
+        <p>Toca la pantalla ✨</p>
+    </div>
+
+    <!-- Música -->
+    <audio id="musica" src="musica.mp3" loop></audio>
+
+    <!-- Globos -->
+    <div class="globos">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Cumple -->
+    <div id="cumple">
+        <h1 id="titulo"></h1>
+        <p id="mensaje"></p>
+        <div class="gino-container">
+            <img src="gino.png" class="gino" alt="Gino">
+        </div>
+        <h2>Machuca el botón Hanna 👇</h2>
+        <button id="btnVideo">🎁 Ver sorpresa 🎁</button>
+    </div>
+
+    <!-- Video limpio, sin bordes ni sombras -->
+    <div id="videoContainer" class="oculto">
+        <iframe
+            id="videoDrive"
+            src="https://drive.google.com/file/d/1CcItPtHYqfPFmLE4J7JrkhVCsFvTjz0t/view"
+            frameborder="0"
+            allow="autoplay"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
