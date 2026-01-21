@@ -7,8 +7,6 @@ const mensajeTexto = "¡Hoy cumples 3 añitos! 💕✨";
 const titulo = document.getElementById("titulo");
 const mensaje = document.getElementById("mensaje");
 
-const iframe = document.getElementById("videoDrive");
-
 let i = 0;
 let j = 0;
 
@@ -46,8 +44,5 @@ btn.addEventListener("click", () => {
     musica.pause();
     cumple.style.display = "none";
     video.classList.remove("oculto");
-
-    iframe.src = "https://drive.google.com/file/d/1CcItPtHYqfPFmLE4J7JrkhVCsFvTjz0t/view?usp=sharing";
 });
-
 
