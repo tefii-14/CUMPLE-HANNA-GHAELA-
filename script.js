@@ -7,6 +7,8 @@ const mensajeTexto = "¡Hoy cumples 3 añitos! 💕✨";
 const titulo = document.getElementById("titulo");
 const mensaje = document.getElementById("mensaje");
 
+const iframe = document.getElementById("videoVimeo");
+
 let i = 0;
 let j = 0;
 
@@ -44,5 +46,8 @@ btn.addEventListener("click", () => {
     musica.pause();
     cumple.style.display = "none";
     video.classList.remove("oculto");
+
+    iframe.src = "https://player.vimeo.com/video/1156967439?autoplay=1&muted=0";
+    
 });
 
