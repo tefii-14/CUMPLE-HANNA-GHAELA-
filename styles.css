@@ -104,13 +104,22 @@ button:hover {
 }
 
 /* === VIDEO === */
-#videoDrive {
-    width: 85vw;
-    max-width: 900px;
-    height: 85vh;
+#videoVimeo {
+    width: 100vw;
+    height: 100vh;
+        max-width: 900px;
     border: none;
 }
 
+#videoContainer {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffe4e1; /* mismo fondo, opcional */
+    z-index: 1000;
+}
 
 #video {
     width: 85vw;                 /* más grande en desktop */
